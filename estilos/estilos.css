@@ -37,7 +37,7 @@ body {
 }
 
 .nav__logo-img {
-  width: 14rem;
+  max-width: 80vw;
 }
 
 .nav__ul-li {
@@ -308,6 +308,7 @@ textarea {
 #nav-turnos h2 a {
   color: #aaa;
   text-decoration: underline;
+  text-align: center;
 }
 
 #nav-turnos img {
@@ -336,7 +337,7 @@ textarea {
 }
 
 #turnos-formulario input {
-  width: 300px;
+  width: 50vw;
   height: 35px;
   padding: 5px;
   border: 2px solid #666;
@@ -360,7 +361,7 @@ textarea {
 #turnos {
   border: 3px solid #333;
   border-radius: 0.9rem;
-  margin: 100px;
+  margin: 5vw;
   margin-top: 50px;
   padding: 20px;
 }
@@ -451,7 +452,6 @@ textarea {
 
   .nav__logo-img {
     position: absolute;
-    width: 14rem;
     left: 10px;
     top: 10px;
   }
@@ -581,7 +581,6 @@ textarea {
 
   /*Turnos*/
   #turnos {
-    margin: 10px;
     margin-top: 10px;
   }
 
@@ -591,10 +590,6 @@ textarea {
 
   #turnos-formulario {
     margin: 20px;
-  }
-
-  #turnos-formulario input {
-    width: 250px;
   }
 
   #turnos-formulario button {
