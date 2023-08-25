@@ -399,12 +399,6 @@ textarea {
     height: 250px; /*Cambio de alto de items*/
   }
   /*Fin Seccion trabajos*/
-
-  /*Header*/
-  .header__img {
-    width: 40vw; /*Tamaño adaptado de la imagen*/
-  }
-  /*Fin Header*/
 }
 
 /*Pantalla mediana*/
@@ -500,10 +494,6 @@ textarea {
   .header__titulo-p {
     margin: 4rem 0; /*Mejor espaciado del titulo*/
   }
-
-  .header__img {
-    width: 50vw; /*Tamaño adaptado de la imagen*/
-  }
   /*Fin Header*/
 
   /*Seccion trabajos*/
@@ -530,6 +520,10 @@ textarea {
   .trabajos__contenedor .item {
     height: 200px; /*Cambio de alto de items*/
   }
+  
+  .header__img {
+    width: 90vw; /*Tamaño adaptado de la imagen*/
+  }
 
   /*Mapa*/
   .mapa {
@@ -548,10 +542,6 @@ textarea {
   #header p {
     font-size: 1.1rem; /*Cambio de tamaño de letra*/
     margin-top: 5px; /*Distancia al titulo*/
-  }
-
-  .header__img {
-    width: 35vw; /*Tamaño adaptado de la imagen*/
   }
   /*Fin Header*/
 
