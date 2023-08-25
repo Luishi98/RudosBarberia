@@ -113,7 +113,7 @@ body {
 }
 
 .header__img {
-  height: 30rem;
+  width: 30rem;
   object-fit: contain;
   border-radius: 0.9rem;
   border: 3px solid #333;
@@ -402,7 +402,7 @@ textarea {
 
   /*Header*/
   .header__img {
-    height: 40vh; /*Tamaño adaptado de la imagen*/
+    width: 40vw; /*Tamaño adaptado de la imagen*/
   }
   /*Fin Header*/
 }
@@ -502,7 +502,7 @@ textarea {
   }
 
   .header__img {
-    height: 50vh; /*Tamaño adaptado de la imagen*/
+    width: 50vw; /*Tamaño adaptado de la imagen*/
   }
   /*Fin Header*/
 
@@ -551,7 +551,7 @@ textarea {
   }
 
   .header__img {
-    height: 35vh; /*Tamaño adaptado de la imagen*/
+    width: 35vw; /*Tamaño adaptado de la imagen*/
   }
   /*Fin Header*/
 
