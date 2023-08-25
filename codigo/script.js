@@ -18,7 +18,7 @@ const navUl = document.querySelector(".nav__ul");
 const navItems = document.querySelectorAll(".nav__ul-li");
 
 function menuDesplegable() {
-  const esPantallaPequena = window.matchMedia("(max-width: 768px)").matches;
+  const esPantallaPequena = window.matchMedia("(max-width: 970px)").matches;
   if (esPantallaPequena) {
     const menuAbierto = navUl.classList.contains("menu-open");
     navItems.forEach((item) => {
