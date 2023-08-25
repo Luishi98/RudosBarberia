@@ -1,0 +1,615 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-shadow: 5px 5px 5px #111;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #222;
+}
+
+.divisor {
+  background-color: #aaa;
+  border: none;
+  border-bottom: 2px solid #777;
+  border-radius: 0.8rem;
+  width: 90%;
+  height: 5px;
+  margin: 80px auto;
+}
+
+/*Barra de navegación*/
+#nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.nav__ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__logo-img {
+  width: 14rem;
+}
+
+.nav__ul-li {
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+}
+
+.nav__ul-li-a {
+  text-decoration: none;
+  color: #eee;
+  margin: 25px;
+}
+
+.nav__ul-li-a:hover {
+  color: #aaa;
+}
+
+.nav__btn {
+  width: 13rem;
+  height: 3.5rem;
+  background-color: transparent;
+  border: 2px solid #eee;
+  color: #eee;
+  border-radius: 0.4rem;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.nav__btn a {
+  color: #eee;
+  text-decoration: none;
+}
+
+.nav__btn:hover {
+  background-color: #444;
+  cursor: pointer;
+}
+
+.boton-responsive {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  color: transparent;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.boton-li {
+  position: absolute;
+  top: -100px;
+}
+/*Fin Barra de navegación*/
+
+/*Header*/
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.header__titulo {
+  font-size: 5rem;
+  color: #eee;
+  text-align: center;
+}
+
+#header p {
+  font-size: 2rem;
+  color: #eee;
+  text-align: center;
+}
+
+.header__img {
+  height: 30rem;
+  object-fit: contain;
+  border-radius: 0.9rem;
+  border: 3px solid #333;
+}
+/*Fin Header*/
+
+/*Seccion trabajos*/
+.subtitulo-trabajos {
+  font-size: 5rem;
+  color: #eee;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.trabajos__contenedor {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  gap: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+}
+
+.trabajos__contenedor .item {
+  height: 300px;
+  background-color: #333f;
+  border: 3px solid #555;
+  border-radius: 1.5rem;
+  box-shadow: 10px 10px 5px #111;
+  overflow: hidden;
+}
+
+.item img {
+  max-width: 100%;
+  object-fit: cover;
+}
+/*Fin Seccion trabajos*/
+
+/*Ampliacion de imagen*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.overlay-image {
+  max-width: 90%;
+  max-height: 90%;
+  border: 3px solid #555;
+  border-radius: 1.5rem;
+}
+
+.overlay.active {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+/*FinAmpliacion de imagen*/
+
+/*Formulario*/
+#formulario {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 70px;
+}
+
+#formulario label {
+  display: block;
+  font-size: 1.5rem;
+  margin: 15px 0;
+  color: #aaa;
+}
+
+#formulario input {
+  width: 300px;
+  height: 35px;
+  padding: 5px;
+  border: 2px solid #666;
+  border-radius: 0.3rem;
+  background-color: #333;
+  color: #aaa;
+}
+
+textarea {
+  width: 300px;
+  height: 80px;
+  resize: none;
+  padding: 5px;
+  border: 2px solid #666;
+  border-radius: 0.3rem;
+  background-color: #333;
+  color: #aaa;
+}
+
+#formulario button {
+  display: block;
+  font-size: 1.5rem;
+  margin: 3rem 0;
+  background-color: #333;
+  border: 2px solid #666;
+  width: 90px;
+  height: 40px;
+  border-radius: 0.3rem;
+  color: #aaa;
+}
+/*Fin Formulario*/
+
+/*Mapa*/
+.mapa {
+  width: 40rem;
+  height: 24rem;
+  border: 2px solid #666;
+  border-radius: 0.3rem;
+}
+
+.mapa-pie {
+  font-size: 1.5rem;
+  color: #888;
+  text-align: center;
+  margin-top: 2rem;
+}
+/*Fin Mapa*/
+
+/*Footer*/
+#pie {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 15rem;
+  background-color: #111;
+}
+
+#pie p {
+  font-size: 1.5rem;
+  color: #888;
+  text-align: center;
+}
+
+.copi {
+  color: #fff;
+}
+
+#pie p .rudos {
+  color: #bbb;
+}
+
+.instagram_a {
+  text-decoration: none;
+  color: #888;
+  font-size: 1.5rem;
+}
+
+.instagram_a:hover {
+  color: #666;
+}
+
+.return a {
+  font-size: 1.5rem;
+  color: #888;
+  text-decoration: none;
+}
+
+.fa-arrow-circle-o-up {
+  color: #888;
+}
+/*Fin Footer*/
+
+/*Turnos*/
+#nav-turnos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px;
+}
+
+#nav-turnos h2 a {
+  color: #aaa;
+  text-decoration: underline;
+}
+
+#nav-turnos img {
+  width: 20rem;
+}
+
+.titulo {
+  font-size: 4rem;
+  color: #eee;
+  text-align: center;
+}
+
+#turnos-formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 70px;
+}
+
+#turnos-formulario label {
+  display: block;
+  font-size: 1.5rem;
+  margin: 15px 0;
+  color: #aaa;
+}
+
+#turnos-formulario input {
+  width: 300px;
+  height: 35px;
+  padding: 5px;
+  border: 2px solid #666;
+  border-radius: 0.3rem;
+  background-color: #333;
+  color: #aaa;
+}
+
+#turnos-formulario button {
+  display: block;
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  background-color: #333;
+  border: 2px solid #666;
+  width: 90px;
+  height: 40px;
+  border-radius: 0.3rem;
+  color: #aaa;
+}
+
+#turnos {
+  border: 3px solid #333;
+  border-radius: 0.9rem;
+  margin: 100px;
+  margin-top: 50px;
+  padding: 20px;
+}
+/*Fin Turnos*/
+
+/*Pantalla horizontal*/
+@media (max-width: 1300px) {
+  /*Seccion trabajos*/
+  .trabajos__contenedor {
+    grid-template-columns: repeat(3, 300px); /*Cambio de cantidad de columnas*/
+  }
+  /*Fin Seccion trabajos*/
+
+  /*Formulario*/
+  .subtitulo-form {
+    font-size: 4rem;
+    text-align: center;
+  }
+  /*Fin Formulario*/
+
+  /*Mapa*/
+  .mapa {
+    width: 30rem; /*Cambio de ancho*/
+    height: 24rem; /*Cambio de alto*/
+  }
+  /*Fin Mapa*/
+}
+
+@media (max-width: 1000px) {
+  /*Seccion trabajos*/
+  .trabajos__contenedor {
+    grid-template-columns: repeat(3, 250px); /*Cambio de cantidad de columnas*/
+  }
+
+  .trabajos__contenedor .item {
+    height: 250px; /*Cambio de alto de items*/
+  }
+  /*Fin Seccion trabajos*/
+
+  /*Header*/
+  .header__img {
+    height: 40vh; /*Tamaño adaptado de la imagen*/
+  }
+  /*Fin Header*/
+}
+
+/*Pantalla mediana*/
+@media (max-width: 970px) {
+  /*Barra de navegación completamente nueva*/
+  #nav-bar {
+    width: 100%;
+    background-color: #555;
+    height: 5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav-bar-open {
+    z-index: 100;
+  }
+
+  .nav__ul li,
+  .nav__btn {
+    position: absolute;
+    top: -100px;
+  }
+
+  .menu-open {
+    position: static;
+    margin-top: 14.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    z-index: 100;
+    border-radius: 0.8rem;
+    overflow: hidden;
+  }
+
+  .menu-open li {
+    position: static;
+    border: 1px solid #222;
+    border-radius: 0.2rem;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .boton-li {
+    position: static;
+  }
+
+  .nav__logo-img {
+    position: absolute;
+    width: 14rem;
+    left: 10px;
+    top: 10px;
+  }
+
+  .imagen-turnos {
+    position: inherit;
+  }
+
+  .boton-responsive-open {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    color: #333;
+    background-color: transparent;
+    border: 2px solid #eee;
+    border-radius: 0.4rem;
+    box-shadow: 5px 5px 5px #111;
+  }
+
+  .boton-i-open {
+    position: relative;
+    color: #eee;
+    font-size: 1.6rem;
+    text-align: center;
+    text-shadow: none;
+  }
+  /*Fin Barra de navegación*/
+
+  /*Header*/
+  #header {
+    flex-direction: column; /*Cambio de direccion de los items*/
+  }
+
+  .header__titulo {
+    font-size: 6rem; /*Tamaño de fuente adaptada*/
+  }
+
+  .header__titulo-p {
+    margin: 4rem 0; /*Mejor espaciado del titulo*/
+  }
+
+  .header__img {
+    height: 50vh; /*Tamaño adaptado de la imagen*/
+  }
+  /*Fin Header*/
+
+  /*Seccion trabajos*/
+  .trabajos__contenedor {
+    grid-template-columns: repeat(2, 300px); /*Cambio de cantidad de columnas*/
+  }
+  /*Fin Seccion trabajos*/
+
+  /*Formulario*/
+  #formulario {
+    flex-direction: column; /*Cambio de direccion de los items*/
+  }
+  /*Fin Formulario*/
+}
+
+@media (max-width: 600px) {
+  .trabajos__contenedor {
+    grid-template-columns: repeat(
+      2,
+      200px
+    ); /*Cambio de cantidad y ancho de columnas*/
+  }
+
+  .trabajos__contenedor .item {
+    height: 200px; /*Cambio de alto de items*/
+  }
+
+  /*Mapa*/
+  .mapa {
+    width: 25rem; /*Cambio de ancho*/
+    height: 12rem; /*Cambio de alto*/
+  }
+}
+
+/*Pantalla chica*/
+@media (max-width: 400px) {
+  /*Header*/
+  .header__titulo {
+    font-size: 2.9rem; /*Tamaño de fuente adaptada*/
+  }
+
+  #header p {
+    font-size: 1.1rem; /*Cambio de tamaño de letra*/
+    margin-top: 5px; /*Distancia al titulo*/
+  }
+
+  .header__img {
+    height: 35vh; /*Tamaño adaptado de la imagen*/
+  }
+  /*Fin Header*/
+
+  /*Seccion trabajos*/
+  .trabajos__contenedor {
+    grid-template-columns: repeat(
+      3,
+      100px
+    ); /*Cambio de cantidad y ancho de columnas*/
+  }
+
+  .trabajos__contenedor .item {
+    height: 100px; /*Cambio de alto de items*/
+  }
+
+  .subtitulo-trabajos {
+    font-size: 2rem; /*Cambio de tamaño de letra*/
+  }
+  /*Fin Seccion trabajos*/
+
+  /*Formulario*/
+  .subtitulo-form {
+    font-size: 2rem;
+  }
+  /*Fin Formulario*/
+
+  /*Mapa*/
+  .mapa {
+    width: 20rem; /*Cambio de ancho*/
+    height: 18rem; /*Cambio de alto*/
+  }
+
+  .mapa-pie {
+    font-size: 1rem;
+  }
+  /*Fin Mapa*/
+
+  /*Turnos*/
+  #turnos {
+    margin: 10px;
+    margin-top: 10px;
+  }
+
+  .titulo {
+    font-size: 2rem;
+  }
+
+  #turnos-formulario {
+    margin: 20px;
+  }
+
+  #turnos-formulario input {
+    width: 250px;
+  }
+
+  #turnos-formulario button {
+    margin: auto;
+    margin-top: 20px;
+  }
+  /*Fin Turnos*/
+}

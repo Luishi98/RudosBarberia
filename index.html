@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="shortcut icon" href="imagenes/icono.png" type="image/x-icon">
+    <title>Rudos Barbería</title>
+</head>
+
+<body>
+    <nav id="nav-bar">
+        <div class="nav__logo"><img src="imagenes/logo.png" class="nav__logo-img" alt="Logo"></div>
+        <ul class="nav__ul">
+            <li class="nav__ul-li"><a href="#nav-bar" class="nav__ul-li-a"> Nosotros</a></li>
+            <li class="nav__ul-li"><a href="#divisor-trabajos" class="nav__ul-li-a"> Trabajos</a></li>
+            <li class="nav__ul-li"><a href="#divisor-contacto" class="nav__ul-li-a"> Contacto</a></li>
+            <li class="nav__ul-li li-boton"><a href="turnos.html" class="nav__ul-li-a boton-li">Agenda tu turno</a></li>
+        </ul>
+        <a href="turnos.html"><button class="nav__btn">Agenda tu turno</button></a>
+        <button class="boton-responsive boton-responsive-open"><i class="fa fa-bars boton-responsive boton-i-open"
+                aria-hidden="true"></i></button>
+    </nav>
+
+    <header id="header">
+        <div class="header__titulo-p">
+            <h1 class="header__titulo">Juan Martinez</h1>
+            <p>Barbero y Socio de Rudos Barbería</p>
+        </div>
+        <img src="imagenes/tato.jpg" alt="Tato" class="header__img">
+    </header>
+    <hr class="divisor" id="divisor-trabajos">
+    <section id="trabajos">
+        <h2 class="subtitulo-trabajos">Nuestros Trabajos</h2>
+        <div class="trabajos__contenedor">
+            <div class="item"> <img class="trabajos-img" src="/imagenes/galeria/1/portada.jpg" alt=""> </div>
+            <div class="item"> <img class="trabajos-img" src="/imagenes/galeria/2/portada.jpg" alt=""> </div>
+            <div class="item"> <img class="trabajos-img" src="/imagenes/galeria/3/portada.jpg" alt=""> </div>
+            <div class="item"> <img class="trabajos-img" src="/imagenes/galeria/4/portada.jpg" alt=""> </div>
+            <div class="item"> <img class="trabajos-img" src="/imagenes/galeria/5/portada.jpg" alt=""> </div>
+            <div class="item"> <img class="trabajos-img" src="/imagenes/galeria/6/portada.jpg" alt=""> </div>
+            <div class="item"> <img class="trabajos-img" src="/imagenes/galeria/7/portada.jpg" alt=""> </div>
+            <div class="item"> <img class="trabajos-img" src="/imagenes/galeria/8/portada.jpg" alt=""> </div>
+            <div class="item"> <img class="trabajos-img" src="/imagenes/galeria/9/portada.jpg" alt=""> </div>
+            <div class="item"> <img class="trabajos-img" src="/imagenes/galeria/10/portada.jpg" alt=""> </div>
+            <div class="item"> <img class="trabajos-img" src="/imagenes/galeria/11/portada.jpg" alt=""> </div>
+            <div class="item"> <img class="trabajos-img" src="/imagenes/galeria/12/portada.jpg" alt=""> </div>
+        </div>
+        <div class="overlay" id="overlay">
+            <img src="" alt="Imagen Ampliada" class="overlay-image" id="overlayImage">
+        </div>
+    </section>
+    <hr class="divisor" id="divisor-contacto">
+    <section id="formulario">
+        <div>
+            <h2 class="subtitulo-trabajos subtitulo-form">Contactanos</h2>
+            <form action="https://formspree.io/f/xjvqwrqz" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="comentario">Tu comentario:</label>
+                <textarea id="comentario" name="comentario" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <div>
+            <h2 class="subtitulo-trabajos subtitulo-form">Visitanos</h2>
+            <iframe class="mapa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d205.2855334178211!2d-58.40971571751089!3d-34.589782435501206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbcb27aec9d9%3A0xd43a8d6de4eccfc2!2sBaron_barbershop!5e0!3m2!1ses!2sar!4v1692848265417!5m2!1ses!2sar"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="mapa-pie">Horario: Lunes a Sábados de 10hs a 20hs</p>
+        </div>
+    </section>
+
+
+
+    <footer id="pie">
+        <p> <span class="copi">&copy;</span> Todos los derechos reservados <span class="rudos">Rudos Barbería</span>
+        </p>
+        <a href="https://www.instagram.com/rudosbarberia1/" target="_blank" class="instagram_a">
+            <i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
+
+        <span class="return"><a href="#nav-bar"><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i> Regresar
+                Arriba</a></span>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/7da56bf37e.js" crossorigin="anonymous"></script>
+    <script src="codigo/script.js"></script>
+</body>
+
+</html>
