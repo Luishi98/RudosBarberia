@@ -14,16 +14,24 @@ function mostrarImagenEnOverlay(index) {
   overlayImage.src = galleryImages[index].src;
 }
 
-antesButton.addEventListener("click", () => {
-  event.stopPropagation();
+function cambiarImagenDerecha() {
+  currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+  mostrarImagenEnOverlay(currentImageIndex);
+}
+
+function cambiarImagenIzquierda() {
   currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
   mostrarImagenEnOverlay(currentImageIndex);
+}
+
+antesButton.addEventListener("click", () => {
+  event.stopPropagation();
+  cambiarImagenIzquierda()
 });
 
 despuesButton.addEventListener("click", () => {
   event.stopPropagation();
-  currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-  mostrarImagenEnOverlay(currentImageIndex);
+  cambiarImagenDerecha()
 });
 
 galleryImages.forEach((image, index) => {
@@ -33,9 +41,37 @@ galleryImages.forEach((image, index) => {
     overlay.classList.add("active");
   });
 });
-
+/*
 overlay.addEventListener("click", () => {
   overlay.classList.remove("active");
+});
+*/
+
+overlay.addEventListener("click", (event) => {
+  if (event.target === overlay) {
+    overlay.classList.remove("active");
+  }
+});
+
+// Evento touchstart para registrar el inicio del deslizamiento
+overlay.addEventListener("touchstart", (event) => {
+  touchStartX = event.touches[0].clientX;
+});
+
+// Evento touchmove para determinar la dirección del deslizamiento
+overlay.addEventListener("touchmove", (event) => {
+  if (touchStartX !== null) {
+    const touchX = event.touches[0].clientX;
+    const touchDeltaX = touchX - touchStartX;
+
+    if (touchDeltaX > 50) {
+      cambiarImagenIzquierda();
+      touchStartX = null;
+    } else if (touchDeltaX < -50) {
+      cambiarImagenDerecha();
+      touchStartX = null;
+    }
+  }
 });
 
 //Boton del menu desplegable
