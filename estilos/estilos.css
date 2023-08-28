@@ -94,6 +94,7 @@ body {
 
 /*Header*/
 #header {
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -181,6 +182,31 @@ body {
   display: flex;
   opacity: 1;
   visibility: visible;
+}
+
+.antes {
+  border: none;
+  background-color: transparent;
+  position: relative;
+  left: 3.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  z-index: 10000;
+}
+
+.despues {
+  border: none;
+  background-color: transparent;
+  position: relative;
+  right: 3.5rem;
+  width: 2rem;
+  height: 2rem;
+  z-index: 10000;
+}
+
+.antes i, .despues i {
+  font-size: 3.5rem;
+  color: #aaaa;
 }
 /*FinAmpliacion de imagen*/
 
